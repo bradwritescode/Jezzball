@@ -1,11 +1,3 @@
-//
-//  GameViewController.swift
-//  Jezzball
-//
-//  Created by Brad Angelcyk on 8/5/14.
-//  Copyright (c) 2014 We Write Code, LLC. All rights reserved.
-//
-
 import UIKit
 import SpriteKit
 
