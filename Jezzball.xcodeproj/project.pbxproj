@@ -14,6 +14,7 @@
 		A27EAC791991A14B007440BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A27EAC771991A14B007440BE /* Main.storyboard */; };
 		A27EAC7B1991A14B007440BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A27EAC7A1991A14B007440BE /* Images.xcassets */; };
 		A27EAC871991A14B007440BE /* JezzballTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27EAC861991A14B007440BE /* JezzballTests.swift */; };
+		A27EAC941991A7B1007440BE /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = A27EAC931991A7B1007440BE /* ball.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		A27EAC801991A14B007440BE /* JezzballTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JezzballTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A27EAC851991A14B007440BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A27EAC861991A14B007440BE /* JezzballTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JezzballTests.swift; sourceTree = "<group>"; };
+		A27EAC931991A7B1007440BE /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		A27EAC6C1991A14B007440BE /* Jezzball */ = {
 			isa = PBXGroup;
 			children = (
+				A27EAC901991A79A007440BE /* Images */,
 				A27EAC6F1991A14B007440BE /* AppDelegate.swift */,
 				A27EAC711991A14B007440BE /* GameScene.sks */,
 				A27EAC731991A14B007440BE /* GameScene.swift */,
@@ -113,6 +116,14 @@
 				A27EAC851991A14B007440BE /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A27EAC901991A79A007440BE /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A27EAC931991A7B1007440BE /* ball.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +208,7 @@
 			files = (
 				A27EAC7B1991A14B007440BE /* Images.xcassets in Resources */,
 				A27EAC721991A14B007440BE /* GameScene.sks in Resources */,
+				A27EAC941991A7B1007440BE /* ball.png in Resources */,
 				A27EAC791991A14B007440BE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
