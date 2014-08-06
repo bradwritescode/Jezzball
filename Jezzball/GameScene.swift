@@ -2,15 +2,10 @@ import SpriteKit
 
 let canvasWidth: UInt32 = 640
 let canvasHeight: UInt32 = 1136
-var balls = [AnyObject]()
 var ballCategory: UInt32 = 1
 var wallCategory: UInt32 = 2
 
 class BallNode: NSObject {
-    var yDirection: CGFloat? = 1.0;
-    var xDirection: CGFloat? = 1.0;
-    var ySpeed: CGFloat? = 5.0;
-    var xSpeed: CGFloat? = 5.0;
     var ballSprite: SKSpriteNode;
 
     init(x: CGFloat, y: CGFloat) {
@@ -44,10 +39,15 @@ class GameScene: SKScene {
             let ball = BallNode(x: CGFloat(arc4random()%(canvasWidth)),
                                 y: CGFloat(arc4random()%(canvasHeight)))
 
-            balls.append(ball)
             self.addChild(ball.ballSprite)
 
-            ball.ballSprite.physicsBody.applyImpulse(CGVectorMake(250, 250))
+            var xSpeed: CGFloat = 250
+            var ySpeed: CGFloat = 250
+
+            xSpeed = (Int(arc4random()%2) == 1) ? xSpeed : -xSpeed
+            ySpeed = (Int(arc4random()%2) == 1) ? ySpeed : -ySpeed
+
+            ball.ballSprite.physicsBody.applyImpulse(CGVectorMake(xSpeed, ySpeed))
         }
     }
 
