@@ -25,6 +25,26 @@ class GameScene: SKScene {
         }
     }
 
+    override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
+        /* Called when a touch begins */
+
+        if touches.count == 2 {
+            let locations = [touches.allObjects[0].locationInNode(self),
+                             touches.allObjects[1].locationInNode(self)]
+
+            var xDifference = locations[0].x - locations[1].x
+            var yDifference = locations[0].y - locations[1].y
+
+            if yDifference > xDifference {
+                println("vertical unpinch")
+            } else if yDifference < xDifference {
+                println("horizontal unpinch")
+            } else {
+                assert(1, "danger! danger!")
+            }
+        }
+    }
+
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
     }
