@@ -45,7 +45,7 @@ class GameScene: SKScene {
         physicsBody.mass = 100.0
         self.physicsBody = physicsBody
 
-        for i in 1..<20 {
+        for i in 1...20 {
             var ball = BallNode()
 
             self.addChild(ball)
