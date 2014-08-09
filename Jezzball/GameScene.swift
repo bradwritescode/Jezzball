@@ -2,8 +2,8 @@ import SpriteKit
 
 let canvasWidth: UInt32 = 640
 let canvasHeight: UInt32 = 1136
-var ballCategory: UInt32 = 1
-var wallCategory: UInt32 = 2
+let ballCategory: UInt32 = 1
+let wallCategory: UInt32 = 2
 
 class GameScene: SKScene {
     override func didMoveToView(view: SKView) {
