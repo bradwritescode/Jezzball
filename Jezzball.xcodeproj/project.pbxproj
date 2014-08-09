@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A270260F1995B58900D9439B /* BallNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A270260E1995B58900D9439B /* BallNode.swift */; };
 		A27EAC701991A14B007440BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27EAC6F1991A14B007440BE /* AppDelegate.swift */; };
 		A27EAC721991A14B007440BE /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A27EAC711991A14B007440BE /* GameScene.sks */; };
 		A27EAC741991A14B007440BE /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27EAC731991A14B007440BE /* GameScene.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A270260E1995B58900D9439B /* BallNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BallNode.swift; sourceTree = "<group>"; };
 		A27EAC6A1991A14B007440BE /* Jezzball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jezzball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A27EAC6E1991A14B007440BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A27EAC6F1991A14B007440BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				A27EAC6F1991A14B007440BE /* AppDelegate.swift */,
 				A27EAC711991A14B007440BE /* GameScene.sks */,
 				A27EAC731991A14B007440BE /* GameScene.swift */,
+				A270260E1995B58900D9439B /* BallNode.swift */,
 				A27EAC751991A14B007440BE /* GameViewController.swift */,
 				A27EAC771991A14B007440BE /* Main.storyboard */,
 				A27EAC7A1991A14B007440BE /* Images.xcassets */,
@@ -229,6 +232,7 @@
 			files = (
 				A27EAC741991A14B007440BE /* GameScene.swift in Sources */,
 				A27EAC761991A14B007440BE /* GameViewController.swift in Sources */,
+				A270260F1995B58900D9439B /* BallNode.swift in Sources */,
 				A27EAC701991A14B007440BE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +419,7 @@
 				A27EAC8C1991A14B007440BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A27EAC8D1991A14B007440BE /* Build configuration list for PBXNativeTarget "JezzballTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +428,7 @@
 				A27EAC8F1991A14B007440BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
