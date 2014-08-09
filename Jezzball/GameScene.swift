@@ -40,7 +40,7 @@ class GameScene: SKScene {
             } else if yDifference < xDifference {
                 println("horizontal unpinch")
             } else {
-                assert(1, "danger! danger!")
+                assert(true, "danger! danger!")
             }
         }
     }
