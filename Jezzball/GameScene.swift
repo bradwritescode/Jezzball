@@ -5,23 +5,33 @@ let canvasHeight: UInt32 = 1136
 var ballCategory: UInt32 = 1
 var wallCategory: UInt32 = 2
 
-class BallNode: NSObject {
-    var ballSprite: SKSpriteNode;
+class BallNode: SKSpriteNode {
+    required init(coder aDecoder: NSCoder!) {
+        super.init(coder: aDecoder)
+    }
 
-    init(x: CGFloat, y: CGFloat) {
-        self.ballSprite = SKSpriteNode(imageNamed: "ball.png")
-        self.ballSprite.yScale = 0.25
-        self.ballSprite.xScale = 0.25
-        self.ballSprite.position = CGPointMake(x, y)
-        self.ballSprite.physicsBody = SKPhysicsBody(circleOfRadius: self.ballSprite.frame.size.width/2)
-        self.ballSprite.physicsBody.friction = 0.0
-        self.ballSprite.physicsBody.restitution = 1.0
-        self.ballSprite.physicsBody.mass = 1.0
-        self.ballSprite.physicsBody.linearDamping = 0.0
-        self.ballSprite.physicsBody.allowsRotation = false
-        self.ballSprite.physicsBody.affectedByGravity = false
-        self.ballSprite.physicsBody.categoryBitMask = ballCategory;
-        self.ballSprite.physicsBody.collisionBitMask = wallCategory;
+    convenience override init() {
+        self.init(imageNamed:"ball.png")
+
+        let xPos = CGFloat(arc4random()%(canvasHeight))
+        let yPos = CGFloat(arc4random()%(canvasWidth))
+
+        self.position = CGPointMake(xPos, yPos)
+        self.yScale = 0.25
+        self.xScale = 0.25
+        self.physicsBody = SKPhysicsBody(circleOfRadius: self.frame.size.width/2)
+        self.physicsBody.friction = 0.0
+        self.physicsBody.restitution = 1.0
+        self.physicsBody.mass = 1.0
+        self.physicsBody.linearDamping = 0.0
+        self.physicsBody.allowsRotation = false
+        self.physicsBody.affectedByGravity = false
+        self.physicsBody.categoryBitMask = ballCategory;
+        self.physicsBody.collisionBitMask = wallCategory;
+    }
+
+    override init(texture: SKTexture!, color: UIColor!, size: CGSize) {
+        super.init(texture: texture, color: color, size: size)
     }
 }
 
@@ -36,10 +46,9 @@ class GameScene: SKScene {
         self.physicsBody = physicsBody
 
         for i in 1..<20 {
-            let ball = BallNode(x: CGFloat(arc4random()%(canvasWidth)),
-                                y: CGFloat(arc4random()%(canvasHeight)))
+            var ball = BallNode()
 
-            self.addChild(ball.ballSprite)
+            self.addChild(ball)
 
             var xSpeed: CGFloat = 250
             var ySpeed: CGFloat = 250
@@ -47,7 +56,7 @@ class GameScene: SKScene {
             xSpeed = (Int(arc4random()%2) == 1) ? xSpeed : -xSpeed
             ySpeed = (Int(arc4random()%2) == 1) ? ySpeed : -ySpeed
 
-            ball.ballSprite.physicsBody.applyImpulse(CGVectorMake(xSpeed, ySpeed))
+            ball.physicsBody.applyImpulse(CGVectorMake(xSpeed, ySpeed))
         }
     }
 
