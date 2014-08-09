@@ -1,10 +1,5 @@
 import SpriteKit
 
-let canvasWidth: UInt32 = 640
-let canvasHeight: UInt32 = 1136
-let ballCategory: UInt32 = 1
-let wallCategory: UInt32 = 2
-
 class GameScene: SKScene {
     override func didMoveToView(view: SKView) {
         self.physicsWorld.gravity = CGVectorMake(0, 0)
